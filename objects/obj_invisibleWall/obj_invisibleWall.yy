@@ -1,10 +1,10 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_desk",
+  "name": "obj_invisibleWall",
   "spriteId": {
-    "name": "spr_desk",
-    "path": "sprites/spr_desk/spr_desk.yy",
+    "name": "spr_invisibleWall",
+    "path": "sprites/spr_invisibleWall/spr_invisibleWall.yy",
   },
   "solid": true,
   "visible": true,
@@ -28,7 +28,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Furniture",
-    "path": "folders/Objects/Furniture.yy",
+    "name": "Blocks",
+    "path": "folders/Objects/Blocks.yy",
   },
 }

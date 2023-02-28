@@ -6,7 +6,7 @@
     "name": "spr_bed1",
     "path": "sprites/spr_bed1/spr_bed1.yy",
   },
-  "solid": false,
+  "solid": true,
   "visible": true,
   "managed": true,
   "spriteMaskId": null,
