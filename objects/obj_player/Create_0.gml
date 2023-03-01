@@ -1,8 +1,16 @@
-/// @description Insert description here
-// You can write your code in this editor
-hsp = 0;
-vsp = 0;
-grv = 0.3;
-walksp = 3;
+//Movement
+hsp = 0
+vsp = 0
+grv = 0.3
+walksp = 3
+
+movable = true
+
+//Use
+xDir = 0
+yDir = 0
+
+//Text
+
 
 

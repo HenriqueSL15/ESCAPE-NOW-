@@ -13,7 +13,7 @@ hsp = move * walksp
 
 vsp = Vmove * walksp
 
-
+if(movable == true){
 //Horizontal Movement/Physics
 if(place_meeting(x+hsp,y,obj_brickWall)){
 	while(!place_meeting(x+sign(hsp),y,obj_brickWall)){
@@ -46,29 +46,39 @@ x = x + hsp
 
 
 //Actual key movement AND animations
-if(key_right){
-	sprite_index = spr_playerR
-	image_xscale = 1
-}
 
-if(key_left){
-	sprite_index = spr_playerR
-	image_xscale = -1
-}
+	
+	
+	if(key_right){
+		xDir = 1
+		yDir = 0
+		sprite_index = spr_playerR
+		image_xscale = 1
+	
+	}
 
-if(!key_right && !key_left && !key_up && !key_down){
-	sprite_index = spr_player
-}
+	if(key_left){
+		xDir = -1
+		yDir = 0
+		sprite_index = spr_playerRL
+
+	}
 
 
 
-if(key_up){
-	sprite_index = spr_playerWalkingUp
-}
+	if(key_up){
+		yDir = 1
+		xDir = 0
+		sprite_index = spr_playerWalkingUp
+	}
 
-if(key_down){
-	sprite_index = spr_playerWalkingDown
-}
+
+	if(key_down){
+		yDir = -1
+		xDir = 0
+		sprite_index = spr_playerWalkingDown
+	}
+
 
 
 if(place_meeting(x,y+vsp,obj_desk)){
@@ -101,4 +111,13 @@ if(place_meeting(x,y+vsp,obj_brickWall)){
 
 y = y + vsp
 
-
+}else{
+	if(item == 1){
+		sprite_index = spr_playerUp
+	}else if(item == 2){
+		sprite_index = spr_playerLeft
+	}else if(item == 3){
+		sprite_index = spr_playerUp
+	}
+	
+}
