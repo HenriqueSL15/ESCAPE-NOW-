@@ -13,6 +13,13 @@ hsp = move * walksp
 
 vsp = Vmove * walksp
 
+if(obj_inventory.inventory == false){
+	movable = true
+	item = 2
+}else{
+	movable = false	
+}
+
 if(movable == true){
 //Horizontal Movement/Physics
 if(place_meeting(x+hsp,y,obj_brickWall)){

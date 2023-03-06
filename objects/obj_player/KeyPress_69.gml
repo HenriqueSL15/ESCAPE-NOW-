@@ -2,8 +2,10 @@
 // You can write your code in this editor
 txt = ""
 item = 0
+
+//PICTURE
 if(yDir == 1 && place_meeting(x,y-30,obj_picture2)){
-	instance_create_layer(313,560,"Text",obj_textBox)
+	instance_create_layer(403,440,"Text",obj_textBox)
 	txt = "This looks like a cool picture, I wonder who did it, must have been a good artist."
 	item = 1
 	if(obj_textBox.isWriting == true && obj_textBox.charCount < string_length(txt)){
@@ -19,9 +21,21 @@ if(yDir == 1 && place_meeting(x,y-30,obj_picture2)){
 
 }
 
+//BED
+
 if(xDir == -1 && place_meeting(x-30,y,obj_bed1)){
-	instance_create_layer(313,560,"Text",obj_textBox)
-	txt = "This bed is a mess, hope no one is seeing it."
+	instance_create_layer(403,440,"Text",obj_textBox)
+	if(obj_inventory.coins == false){
+		txt = "OHHHH, there are some golden coins around here HEHE, pretty nice"
+		if(obj_textBox.charCount < string_length(obj_player.txt)){
+			obj_inventory.coins = false
+		}else{
+			obj_inventory.coins = true	
+		}
+		
+	}else{
+		txt = "This bed is a mess, hope no one is seeing it."	
+	}
 	item = 2
 	if(obj_textBox.isWriting == true && obj_textBox.charCount < string_length(txt)){
 		obj_textBox.charCount = string_length(txt)
@@ -36,10 +50,21 @@ if(xDir == -1 && place_meeting(x-30,y,obj_bed1)){
 
 }
 
+//DESK
 if(yDir == 1 && place_meeting(x,y-30,obj_desk)){
-	instance_create_layer(313,560,"Text",obj_textBox)
-	txt = "That's a big desk"
+	instance_create_layer(403,440,"Text",obj_textBox)
+	if(obj_inventory.key == false){
+		txt = "Oh, looks like I found a Key"
+		if(obj_textBox.charCount < string_length(obj_player.txt)){
+			obj_inventory.key = false
+		}else{
+			obj_inventory.key = true	
+		}
+	}else{
+		txt = "Nothing more around here."
+	}
 	item = 3
+	
 	if(obj_textBox.isWriting == true && obj_textBox.charCount < string_length(txt)){
 		obj_textBox.charCount = string_length(txt)
 	}

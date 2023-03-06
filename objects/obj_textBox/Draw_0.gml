@@ -1,9 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-
+if(obj_inventory.inventory == false){
 //Draw Text Box
-draw_sprite(spr_textBox,0,x,y)
+
+draw_sprite(spr_textBox,0,403,440)
 
 
 //Draw Text
@@ -18,13 +19,15 @@ if(charCount < string_length(obj_player.txt)){
 
 
 textPart = string_copy(obj_player.txt,1,charCount)
-draw_text_ext(x+5,y+4,textPart,stringHeight,boxWidth-5)
+draw_text_ext(txtBeginX+5,txtBeginY+4,textPart,stringHeight,boxWidth-5)
 
 
 if(charCount == string_length(obj_player.txt)){
 	alreadyWrote = true
 	isWriting = false
 }
+}
+
 
 
 
