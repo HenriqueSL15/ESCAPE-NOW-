@@ -1,7 +1,9 @@
 inventory = false
 scale = 3
 
-coins = false
+
+
+coins = 0
 
 key = false
 

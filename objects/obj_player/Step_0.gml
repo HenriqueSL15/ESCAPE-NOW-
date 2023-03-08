@@ -13,11 +13,9 @@ hsp = move * walksp
 
 vsp = Vmove * walksp
 
-if(obj_inventory.inventory == false){
-	movable = true
-	item = 2
-}else{
-	movable = false	
+if(obj_inventory.inventory){
+	movable = false
+	item = 1
 }
 
 if(movable == true){
@@ -57,33 +55,42 @@ x = x + hsp
 	
 	
 	if(key_right){
-		xDir = 1
-		yDir = 0
-		sprite_index = spr_playerR
-		image_xscale = 1
+		if(movable){
+			xDir = 1
+			yDir = 0
+			sprite_index = spr_playerR
+			image_xscale = 1
+		}
+		
 	
 	}
 
 	if(key_left){
-		xDir = -1
-		yDir = 0
-		sprite_index = spr_playerRL
+		if(movable){
+			xDir = -1
+			yDir = 0
+			sprite_index = spr_playerRL
+		}
 
 	}
 
 
 
 	if(key_up){
-		yDir = 1
-		xDir = 0
-		sprite_index = spr_playerWalkingUp
+		if(movable){
+			yDir = 1
+			xDir = 0
+			sprite_index = spr_playerWalkingUp
+		}
 	}
 
 
 	if(key_down){
-		yDir = -1
-		xDir = 0
-		sprite_index = spr_playerWalkingDown
+		if(movable){
+			yDir = -1
+			xDir = 0
+			sprite_index = spr_playerWalkingDown
+		}
 	}
 
 

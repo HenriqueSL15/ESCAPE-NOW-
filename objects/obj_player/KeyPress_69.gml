@@ -3,6 +3,7 @@
 txt = ""
 item = 0
 
+
 //PICTURE
 if(yDir == 1 && place_meeting(x,y-30,obj_picture2)){
 	instance_create_layer(403,440,"Text",obj_textBox)
@@ -24,24 +25,27 @@ if(yDir == 1 && place_meeting(x,y-30,obj_picture2)){
 //BED
 
 if(xDir == -1 && place_meeting(x-30,y,obj_bed1)){
+	
 	instance_create_layer(403,440,"Text",obj_textBox)
-	if(obj_inventory.coins == false){
-		txt = "OHHHH, there are some golden coins around here HEHE, pretty nice"
+	if(!obj_inventory.key){
+		txt = "Oh, looks like I found a Key"
+		
+		
 		if(obj_textBox.charCount < string_length(obj_player.txt)){
-			obj_inventory.coins = false
+			obj_inventory.key = false
 		}else{
-			obj_inventory.coins = true	
+			obj_inventory.key = true	
 		}
 		
 	}else{
 		txt = "This bed is a mess, hope no one is seeing it."	
 	}
 	item = 2
-	if(obj_textBox.isWriting == true && obj_textBox.charCount < string_length(txt)){
+	if(obj_textBox.isWriting&& obj_textBox.charCount < string_length(txt)){
 		obj_textBox.charCount = string_length(txt)
 	}
 	
-	if(obj_textBox.alreadyWrote == true && obj_textBox.isWriting == false){
+	if(obj_textBox.alreadyWrote && !obj_textBox.isWriting){
 		instance_destroy(obj_textBox)
 		movable = true
 	}
@@ -53,19 +57,25 @@ if(xDir == -1 && place_meeting(x-30,y,obj_bed1)){
 //DESK
 if(yDir == 1 && place_meeting(x,y-30,obj_desk)){
 	instance_create_layer(403,440,"Text",obj_textBox)
-	if(obj_inventory.key == false){
-		txt = "Oh, looks like I found a Key"
+	if(!obj_inventory.key){
+		txt = "I can't open it, maybe if I had a key, that would help."
+		
+	}else if(obj_inventory.key && !obj_inventory.coins){
+		
+		txt = "OHHHH, there are some golden coins around here HEHE, pretty nice"
 		if(obj_textBox.charCount < string_length(obj_player.txt)){
-			obj_inventory.key = false
+			obj_inventory.coins = false
 		}else{
-			obj_inventory.key = true	
+			obj_inventory.coins = true	
 		}
-	}else{
+		
+				
+	}else if(obj_inventory.key && obj_inventory.coins){
 		txt = "Nothing more around here."
 	}
 	item = 3
 	
-	if(obj_textBox.isWriting == true && obj_textBox.charCount < string_length(txt)){
+	if(obj_textBox.isWriting && obj_textBox.charCount < string_length(txt)){
 		obj_textBox.charCount = string_length(txt)
 	}
 	
@@ -75,5 +85,4 @@ if(yDir == 1 && place_meeting(x,y-30,obj_desk)){
 	}
 	
 	
-
 }
