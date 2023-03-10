@@ -4,18 +4,20 @@ txt = ""
 item = 0
 
 
+
 //PICTURE
 if(yDir == 1 && place_meeting(x,y-30,obj_picture2)){
+	text = true
 	instance_create_layer(403,440,"Text",obj_textBox)
 	txt = "This looks like a cool picture, I wonder who did it, must have been a good artist."
 	item = 1
-	if(obj_textBox.isWriting == true && obj_textBox.charCount < string_length(txt)){
+	while(obj_textBox.isWriting == true && obj_textBox.charCount < string_length(txt)){
 		obj_textBox.charCount = string_length(txt)
 	}
 	
 	if(obj_textBox.alreadyWrote == true && obj_textBox.isWriting == false){
 		instance_destroy(obj_textBox)
-		movable = true
+		text = false
 	}
 	
 	
@@ -25,7 +27,7 @@ if(yDir == 1 && place_meeting(x,y-30,obj_picture2)){
 //BED
 
 if(xDir == -1 && place_meeting(x-30,y,obj_bed1)){
-	
+	text = true
 	instance_create_layer(403,440,"Text",obj_textBox)
 	if(!obj_inventory.key){
 		txt = "Oh, looks like I found a Key"
@@ -47,7 +49,7 @@ if(xDir == -1 && place_meeting(x-30,y,obj_bed1)){
 	
 	if(obj_textBox.alreadyWrote && !obj_textBox.isWriting){
 		instance_destroy(obj_textBox)
-		movable = true
+		text = false
 	}
 	
 	
@@ -56,6 +58,7 @@ if(xDir == -1 && place_meeting(x-30,y,obj_bed1)){
 
 //DESK
 if(yDir == 1 && place_meeting(x,y-30,obj_desk)){
+	text = true
 	instance_create_layer(403,440,"Text",obj_textBox)
 	if(!obj_inventory.key){
 		txt = "I can't open it, maybe if I had a key, that would help."
@@ -81,8 +84,20 @@ if(yDir == 1 && place_meeting(x,y-30,obj_desk)){
 	
 	if(obj_textBox.alreadyWrote == true && obj_textBox.isWriting == false){
 		instance_destroy(obj_textBox)
-		movable = true
+		text = false
 	}
 	
+	
+}
+
+//Next ROOM
+
+if(xDir == 1 && place_meeting(x,y,obj_nextSceneRight)){
+	room_goto_next()
+	
+}
+
+if(xDir == -1 && place_meeting(x,y,obj_nextSceneLeft)){
+	room_goto_previous()
 	
 }

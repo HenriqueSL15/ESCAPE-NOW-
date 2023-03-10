@@ -13,10 +13,16 @@ hsp = move * walksp
 
 vsp = Vmove * walksp
 
-if(obj_inventory.inventory){
-	movable = false
-	item = 1
+
+
+if(!text && !obj_inventory.inventory){
+	movable = true
+}else{
+	movable = false	
 }
+	
+	
+
 
 if(movable == true){
 //Horizontal Movement/Physics
@@ -60,6 +66,7 @@ x = x + hsp
 			yDir = 0
 			sprite_index = spr_playerR
 			image_xscale = 1
+			
 		}
 		
 	
