@@ -47,6 +47,20 @@ if(place_meeting(x+hsp,y,obj_bed1)){
 	hsp = 0
 }
 
+if(place_meeting(x+hsp,y,obj_oven)){
+	while(!place_meeting(x+sign(hsp),y,obj_oven)){
+		x = x + sign(hsp)
+	}
+	hsp = 0
+}
+
+if(place_meeting(x+hsp,y,obj_kitchenBase)){
+	while(!place_meeting(x+sign(hsp),y,obj_kitchenBase)){
+		x = x + sign(hsp)
+	}
+	hsp = 0
+}
+
 x = x + hsp
 
 
@@ -125,6 +139,20 @@ if(place_meeting(x,y+vsp,obj_invisibleWall)){
 
 if(place_meeting(x,y+vsp,obj_brickWall)){
 	while(!place_meeting(x,y+sign(vsp),obj_brickWall)){
+		y = y + sign(vsp)
+	}
+	vsp = 0
+}
+
+if(place_meeting(x,y+vsp,obj_oven)){
+	while(!place_meeting(x,y+sign(vsp),obj_oven)){
+		y = y + sign(vsp)
+	}
+	vsp = 0
+}
+
+if(place_meeting(x,y+vsp,obj_kitchenBase)){
+	while(!place_meeting(x,y+sign(vsp),obj_kitchenBase)){
 		y = y + sign(vsp)
 	}
 	vsp = 0

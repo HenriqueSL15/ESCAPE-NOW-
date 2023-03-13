@@ -90,6 +90,32 @@ if(yDir == 1 && place_meeting(x,y-30,obj_desk)){
 	
 }
 
+if(yDir == 1 && place_meeting(x,y-30,obj_oven)){
+	text = true
+	instance_create_layer(403,440,"Text",obj_textBox)
+		txt = "I don't think I need this right now, maybe later..."
+		
+		
+		if(obj_textBox.charCount < string_length(obj_player.txt)){
+			obj_inventory.coins = false
+		}else{
+			obj_inventory.coins = true	
+		}
+		
+	item = 3
+	
+	if(obj_textBox.isWriting && obj_textBox.charCount < string_length(txt)){
+		obj_textBox.charCount = string_length(txt)
+	}
+	
+	if(obj_textBox.alreadyWrote == true && obj_textBox.isWriting == false){
+		instance_destroy(obj_textBox)
+		text = false
+	}
+	
+	
+}
+
 //Next ROOM
 
 if(xDir == 1 && place_meeting(x,y,obj_nextSceneRight)){
