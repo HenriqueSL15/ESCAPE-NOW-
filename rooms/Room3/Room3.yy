@@ -31,6 +31,7 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_5ABD7419","properties":[],"isDnd":false,"objectId":{"name":"obj_kitchenBase","path":"objects/obj_kitchenBase/obj_kitchenBase.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":720.0,"y":384.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_5FE22048","properties":[],"isDnd":false,"objectId":{"name":"obj_kitchenBase","path":"objects/obj_kitchenBase/obj_kitchenBase.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":592.0,"y":384.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_7D37C413","properties":[],"isDnd":false,"objectId":{"name":"obj_oven","path":"objects/obj_oven/obj_oven.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":528.0,"y":384.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_7C52FFE5","properties":[],"isDnd":false,"objectId":{"name":"obj_sink","path":"objects/obj_sink/obj_sink.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":656.0,"y":384.0,},
       ],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritVisibility":true,"inheritSubLayers":true,"gridX":16,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Blocks","instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_52BD212_1_1","properties":[],"isDnd":false,"objectId":{"name":"obj_brickWall","path":"objects/obj_brickWall/obj_brickWall.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":400.0,"y":512.0,},
@@ -468,6 +469,7 @@
     {"name":"inst_5ABD7419","path":"rooms/Room3/Room3.yy",},
     {"name":"inst_5FE22048","path":"rooms/Room3/Room3.yy",},
     {"name":"inst_7D37C413","path":"rooms/Room3/Room3.yy",},
+    {"name":"inst_7C52FFE5","path":"rooms/Room3/Room3.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

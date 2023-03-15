@@ -25,7 +25,6 @@ if(yDir == 1 && place_meeting(x,y-30,obj_picture2)){
 }
 
 //BED
-
 if(xDir == -1 && place_meeting(x-30,y,obj_bed1)){
 	text = true
 	instance_create_layer(403,440,"Text",obj_textBox)
@@ -90,6 +89,7 @@ if(yDir == 1 && place_meeting(x,y-30,obj_desk)){
 	
 }
 
+//OVEN
 if(yDir == 1 && place_meeting(x,y-30,obj_oven)){
 	text = true
 	instance_create_layer(403,440,"Text",obj_textBox)
@@ -116,10 +116,65 @@ if(yDir == 1 && place_meeting(x,y-30,obj_oven)){
 	
 }
 
-//Next ROOM
+//KITCHEN BASE
+if(yDir == 1 && place_meeting(x,y-30,obj_kitchenBase)){
+	text = true
+	instance_create_layer(403,440,"Text",obj_textBox)
+	txt = "It's locked, why?"
+	item = 1
+	while(obj_textBox.isWriting == true && obj_textBox.charCount < string_length(txt)){
+		obj_textBox.charCount = string_length(txt)
+	}
+	
+	if(obj_textBox.alreadyWrote == true && obj_textBox.isWriting == false){
+		instance_destroy(obj_textBox)
+		text = false
+	}
 
+}
+
+//FRIDGE
+if(yDir == 1 && place_meeting(x,y-30,obj_fridge)){
+	text = true
+	instance_create_layer(403,440,"Text",obj_textBox)
+	txt = "COOOOLLLDD"
+	item = 1
+	while(obj_textBox.isWriting == true && obj_textBox.charCount < string_length(txt)){
+		obj_textBox.charCount = string_length(txt)
+	}
+	
+	if(obj_textBox.alreadyWrote == true && obj_textBox.isWriting == false){
+		instance_destroy(obj_textBox)
+		text = false
+	}
+	
+	
+
+}
+
+//SINK
+if(yDir == 1 && place_meeting(x,y-30,obj_sink)){
+	text = true
+	instance_create_layer(403,440,"Text",obj_textBox)
+	txt = "It's seems that there's something blocking the way of the water."
+	item = 1
+	while(obj_textBox.isWriting == true && obj_textBox.charCount < string_length(txt)){
+		obj_textBox.charCount = string_length(txt)
+	}
+	
+	if(obj_textBox.alreadyWrote == true && obj_textBox.isWriting == false){
+		instance_destroy(obj_textBox)
+		text = false
+	}
+	
+	
+
+}
+
+//NEXT ROOM
 if(xDir == 1 && place_meeting(x,y,obj_nextSceneRight)){
 	room_goto_next()
+	
 	
 }
 

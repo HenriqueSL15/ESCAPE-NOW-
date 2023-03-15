@@ -61,6 +61,20 @@ if(place_meeting(x+hsp,y,obj_kitchenBase)){
 	hsp = 0
 }
 
+if(place_meeting(x+hsp,y,obj_fridge)){
+	while(!place_meeting(x+sign(hsp),y,obj_fridge)){
+		x = x + sign(hsp)
+	}
+	hsp = 0
+}
+
+if(place_meeting(x+hsp,y,obj_sink)){
+	while(!place_meeting(x+sign(hsp),y,obj_sink)){
+		x = x + sign(hsp)
+	}
+	hsp = 0
+}
+
 x = x + hsp
 
 
@@ -158,6 +172,19 @@ if(place_meeting(x,y+vsp,obj_kitchenBase)){
 	vsp = 0
 }
 
+if(place_meeting(x,y+vsp,obj_fridge)){
+	while(!place_meeting(x,y+sign(vsp),obj_fridge)){
+		y = y + sign(vsp)
+	}
+	vsp = 0
+}
+
+if(place_meeting(x,y+vsp,obj_sink)){
+	while(!place_meeting(x,y+sign(vsp),obj_sink)){
+		y = y + sign(vsp)
+	}
+	vsp = 0
+}
 y = y + vsp
 
 }else{
