@@ -6,6 +6,8 @@ walksp = 3
 
 text = false
 
+alreadyOpened = false
+
 movable = true
 
 //Use

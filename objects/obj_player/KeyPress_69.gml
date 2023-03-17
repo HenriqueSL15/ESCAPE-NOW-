@@ -171,9 +171,32 @@ if(yDir == 1 && place_meeting(x,y-30,obj_sink)){
 
 }
 
+//Room 2
+
+
 //NEXT ROOM
 if(xDir == 1 && place_meeting(x,y,obj_nextSceneRight)){
-	room_goto_next()
+	if room == Room1{
+	text = true
+	instance_create_layer(403,440,"Text",obj_textBox)
+		txt = "Looks like I need some coins to open this door, I really don't know why but I need "
+	item = 4
+	if obj_inventory.coins{
+		room_goto_next()
+	}
+	while(obj_textBox.isWriting == true && obj_textBox.charCount < string_length(txt)){
+		obj_textBox.charCount = string_length(txt)
+	}
+	
+	if(obj_textBox.alreadyWrote == true && obj_textBox.isWriting == false){
+		instance_destroy(obj_textBox)
+		text = false
+	}
+	}
+	if room == Room2{
+		room_goto_next()
+	}
+	
 	
 	
 }

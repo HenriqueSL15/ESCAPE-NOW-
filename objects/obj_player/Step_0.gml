@@ -21,7 +21,9 @@ if(!text && !obj_inventory.inventory){
 	movable = false	
 }
 	
-	
+if obj_inventory.inventory{
+	item = 1	
+}
 
 
 if(movable == true){
@@ -194,6 +196,7 @@ y = y + vsp
 		sprite_index = spr_playerLeft
 	}else if(item == 3){
 		sprite_index = spr_playerUp
+	}else if(item == 4){
+		sprite_index = spr_playerRight
 	}
-	
 }
