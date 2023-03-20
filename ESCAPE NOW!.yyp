@@ -28,6 +28,7 @@
     {"id":{"name":"obj_chair","path":"objects/obj_chair/obj_chair.yy",},"order":0,},
     {"id":{"name":"spr_carpet1","path":"sprites/spr_carpet1/spr_carpet1.yy",},"order":5,},
     {"id":{"name":"obj_floor","path":"objects/obj_floor/obj_floor.yy",},"order":4,},
+    {"id":{"name":"spr_crowbar","path":"sprites/spr_crowbar/spr_crowbar.yy",},"order":2,},
     {"id":{"name":"spr_playerRL","path":"sprites/spr_playerRL/spr_playerRL.yy",},"order":5,},
     {"id":{"name":"spr_picture2","path":"sprites/spr_picture2/spr_picture2.yy",},"order":2,},
     {"id":{"name":"spr_invUI","path":"sprites/spr_invUI/spr_invUI.yy",},"order":1,},
@@ -65,6 +66,7 @@
     {"id":{"name":"spr_bed1","path":"sprites/spr_bed1/spr_bed1.yy",},"order":3,},
     {"id":{"name":"obj_backgroundBWall","path":"objects/obj_backgroundBWall/obj_backgroundBWall.yy",},"order":0,},
     {"id":{"name":"obj_textBox","path":"objects/obj_textBox/obj_textBox.yy",},"order":0,},
+    {"id":{"name":"spr_key2","path":"sprites/spr_key2/spr_key2.yy",},"order":3,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
   ],
   "Options": [

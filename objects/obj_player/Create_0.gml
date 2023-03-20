@@ -6,7 +6,8 @@ walksp = 3
 
 text = false
 
-alreadyOpened = false
+crowbar = false
+key2 = false
 
 movable = true
 

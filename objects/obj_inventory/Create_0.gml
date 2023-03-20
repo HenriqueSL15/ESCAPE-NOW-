@@ -21,7 +21,8 @@ hInventory = sprite_get_height(spr_invUI) * scale
 
 enum Items{
 	Chave,
-	Moeda
+	Moeda,
+	Crowbar
 }
 
 enum Infos{

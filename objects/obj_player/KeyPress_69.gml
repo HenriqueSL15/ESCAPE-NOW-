@@ -96,11 +96,7 @@ if(yDir == 1 && place_meeting(x,y-30,obj_oven)){
 		txt = "I don't think I need this right now, maybe later..."
 		
 		
-		if(obj_textBox.charCount < string_length(obj_player.txt)){
-			obj_inventory.coins = false
-		}else{
-			obj_inventory.coins = true	
-		}
+		
 		
 	item = 3
 	
@@ -120,7 +116,21 @@ if(yDir == 1 && place_meeting(x,y-30,obj_oven)){
 if(yDir == 1 && place_meeting(x,y-30,obj_kitchenBase)){
 	text = true
 	instance_create_layer(403,440,"Text",obj_textBox)
-	txt = "It's locked, why?"
+	if(!key2){
+		txt = "It's locked, why?"
+	}else{
+		txt = "More coins, I'm going to be rich, OH YEAHHH"
+		
+		if(obj_textBox.charCount < string_length(obj_player.txt)){
+			key2 = true
+			obj_inventory.coins = true
+		}else{
+			obj_inventory.coins = true
+			key2 = false
+		}
+		
+	}
+	
 	item = 1
 	while(obj_textBox.isWriting == true && obj_textBox.charCount < string_length(txt)){
 		obj_textBox.charCount = string_length(txt)
@@ -133,11 +143,25 @@ if(yDir == 1 && place_meeting(x,y-30,obj_kitchenBase)){
 
 }
 
+
 //FRIDGE
 if(yDir == 1 && place_meeting(x,y-30,obj_fridge)){
 	text = true
 	instance_create_layer(403,440,"Text",obj_textBox)
-	txt = "COOOOLLLDD"
+	if(!crowbar){
+		txt = "COOOOLLLDD"
+	}else{
+		txt = "Got a key, but anyone would put a key here, whaaaat"
+		
+		if(obj_textBox.charCount < string_length(obj_player.txt)){
+			crowbar = true
+			key2 = false
+		}else{
+			key2 = true
+			crowbar = false
+		}
+		
+	}
 	item = 1
 	while(obj_textBox.isWriting == true && obj_textBox.charCount < string_length(txt)){
 		obj_textBox.charCount = string_length(txt)
@@ -156,7 +180,18 @@ if(yDir == 1 && place_meeting(x,y-30,obj_fridge)){
 if(yDir == 1 && place_meeting(x,y-30,obj_sink)){
 	text = true
 	instance_create_layer(403,440,"Text",obj_textBox)
-	txt = "It's seems that there's something blocking the way of the water."
+	if (!crowbar){
+		txt = "It's seems that there's  a crowbar blocking the way of the water."
+		
+		if(obj_textBox.charCount < string_length(obj_player.txt)){
+			crowbar = false
+		}else{
+			crowbar = true	
+		}
+	}else{
+		txt = "Everything is normal.... I think...."	
+	}
+	
 	item = 1
 	while(obj_textBox.isWriting == true && obj_textBox.charCount < string_length(txt)){
 		obj_textBox.charCount = string_length(txt)

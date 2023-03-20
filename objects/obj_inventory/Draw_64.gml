@@ -45,6 +45,18 @@ if(inventory == true){
 			
 		}
 		
+		if(gridItems[# Infos.Item,i] == 0 && key == false && coins == false && obj_player.crowbar){
+			
+			draw_sprite_ext(spr_crowbar,gridItems[# Infos.Item,i],xSlot,ySlot,scale,scale,0,c_white,1)
+
+		}
+		
+		if(gridItems[# Infos.Item,i] == 0 && key == false && coins == false && !obj_player.crowbar && obj_player.key2){
+			
+			draw_sprite_ext(spr_key2,gridItems[# Infos.Item,i],xSlot,ySlot,scale,scale,0,c_white,1)
+
+		}
+		
 		
 		
 		
