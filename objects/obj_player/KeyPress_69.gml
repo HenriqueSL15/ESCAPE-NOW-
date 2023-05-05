@@ -212,12 +212,20 @@ if(yDir == 1 && place_meeting(x,y-30,obj_sink)){
 //NEXT ROOM
 if(xDir == 1 && place_meeting(x,y,obj_nextSceneRight)){
 	if room == Room1{
-	text = true
-	instance_create_layer(403,440,"Text",obj_textBox)
-		txt = "Looks like I need some coins to open this door, I really don't know why but I need "
-	item = 4
-	if obj_inventory.coins{
 		room_goto_next()
+		obj_player.x = 572
+	}else if room == Room2{
+		room_goto_next()
+		obj_player.x = 485
+	}
+		
+	/*
+	if obj_inventory.coins{
+	}else{
+		text = true
+		instance_create_layer(403,440,"Text",obj_textBox)
+		txt = "Looks like I need some coins to open this door, I really don't know why but I need "
+		item = 4
 	}
 	while(obj_textBox.isWriting == true && obj_textBox.charCount < string_length(txt)){
 		obj_textBox.charCount = string_length(txt)
@@ -228,15 +236,37 @@ if(xDir == 1 && place_meeting(x,y,obj_nextSceneRight)){
 		text = false
 	}
 	}
-	if room == Room2{
-		room_goto_next()
-	}
+	*/
+	
 	
 	
 	
 }
 
 if(xDir == -1 && place_meeting(x,y,obj_nextSceneLeft)){
-	room_goto_previous()
+	if room == Room3{
+		room_goto_previous()
+		obj_player.x = 785
+	}else if room == Room2 {
+		room_goto_previous()	
+		obj_player.x = 788
+	}
 	
 }
+
+if yDir == -1 && place_meeting(x,y,obj_nextSceneDown){
+	if room == Room4{
+		room_goto(Room2)
+		obj_player.x = 640
+		obj_player.y = 440
+	}
+}
+
+if yDir == 1 && place_meeting(x,y,obj_lockedDoor){
+	if room == Room2{
+		room_goto(Room4)
+		obj_player.x = 640
+		obj_player.y = 440
+	}
+}
+
