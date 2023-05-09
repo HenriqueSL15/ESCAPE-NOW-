@@ -5,7 +5,10 @@ scale = 3
 
 coins = 0
 
+key2 = false
 key = false
+
+count = 0
 
 xBegin = 15 * scale
 yBegin = 12 * scale

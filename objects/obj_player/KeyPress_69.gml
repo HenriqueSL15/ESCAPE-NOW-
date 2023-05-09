@@ -263,10 +263,39 @@ if yDir == -1 && place_meeting(x,y,obj_nextSceneDown){
 }
 
 if yDir == 1 && place_meeting(x,y,obj_lockedDoor){
-	if room == Room2{
-		room_goto(Room4)
-		obj_player.x = 640
-		obj_player.y = 440
+	if(!key2 && obj_inventory.count == 0){
+		
+		txt = "I can't open it, maybe if I had a key, that would help."			
+		
+			
+	}else if(key2 && obj_inventory.count == 0){
+		
+		txt = "Looks like I can go now :D"
+		obj_inventory.count = 1
+		if room == Room2{
+			room_goto(Room4)
+			obj_player.x = 640
+			obj_player.y = 440
+		}
+
 	}
+	if(obj_textBox.charCount < string_length(obj_player.txt)){
+			obj_inventory.key2 = true
+		}else{
+			obj_inventory.key2 = false
+			
+		}	
+	
+	while(obj_textBox.isWriting == true && obj_textBox.charCount < string_length(txt)){
+		obj_textBox.charCount = string_length(txt)
+	}
+	
+	if(obj_textBox.alreadyWrote == true && obj_textBox.isWriting == false){
+		instance_destroy(obj_textBox)
+		text = false
+	}
+	
 }
+
+
 
