@@ -3,7 +3,7 @@ scale = 3
 
 
 
-coins = 0
+coins = false
 
 key2 = false
 key = false
