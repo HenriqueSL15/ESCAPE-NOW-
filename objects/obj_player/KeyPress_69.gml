@@ -211,22 +211,23 @@ if(yDir == 1 && place_meeting(x,y-30,obj_sink)){
 
 //NEXT ROOM
 if(xDir == 1 && place_meeting(x,y,obj_nextSceneRight)){
-	text = true
-	instance_create_layer(403,440,"Text",obj_textBox)
-	if room == Room1{
+	
+	if (room == Room1){
+					
+			obj_player.x = 541
+			room_goto(Room2)
+			
 		
-		if obj_inventory.coins{
 			
-			room_goto_next()
-			obj_player.x = 572
-			
-			
-			
-		}else{
+	}else if room == Room2{
+		room_goto(Room3)
+		obj_player.x = 485
+	}
 		
-		txt = "Looks like I need some coins to open this door, I really don't know why but I need "
-		}
-		item = 4
+		//txt = "Looks like I need some coins to open this door, I really don't know why but I need "
+		
+		
+		item = 1
 		while(obj_textBox.isWriting == true && obj_textBox.charCount < string_length(txt)){
 			obj_textBox.charCount = string_length(txt)
 		}
@@ -234,29 +235,25 @@ if(xDir == 1 && place_meeting(x,y,obj_nextSceneRight)){
 		if(obj_textBox.alreadyWrote == true && obj_textBox.isWriting == false){
 			instance_destroy(obj_textBox)
 			text = false
-			
-			
 		}
 		
-	}else if room == Room2{
-		
-		room_goto_next()
-		obj_player.x = 485
 	}
+	
+	
 		
 	
 	
-}
+
 	
 	
 	
 
 if(xDir == -1 && place_meeting(x,y,obj_nextSceneLeft)){
 	if room == Room3{
-		room_goto_previous()
+		room_goto(Room2)
 		obj_player.x = 785
 	}else if room == Room2 {
-		room_goto_previous()	
+		room_goto(Room1)	
 		obj_player.x = 788
 	}
 	
@@ -271,37 +268,54 @@ if yDir == -1 && place_meeting(x,y,obj_nextSceneDown){
 }
 
 if yDir == 1 && place_meeting(x,y,obj_lockedDoor){
-	if(!key2 && obj_inventory.count == 0){
-		
-		txt = "I can't open it, maybe if I had a key, that would help."			
-		
-			
-	}else if(key2 && obj_inventory.count == 0){
-		
-		txt = "Looks like I can go now :D"
-		obj_inventory.count = 1
-		if room == Room2{
+	text = true
+	instance_create_layer(403,440,"Text",obj_textBox)
+	if(key2){
 			room_goto(Room4)
 			obj_player.x = 640
 			obj_player.y = 440
-		}
-
-	}
-	if(obj_textBox.charCount < string_length(obj_player.txt)){
-			obj_inventory.key2 = true
-		}else{
-			obj_inventory.key2 = false
-			
-		}	
+	key2 = false
+	alreadyEnteredLockedRoom = true
 	
-	while(obj_textBox.isWriting == true && obj_textBox.charCount < string_length(txt)){
-		obj_textBox.charCount = string_length(txt)
-	}
 	
-	if(obj_textBox.alreadyWrote == true && obj_textBox.isWriting == false){
 		instance_destroy(obj_textBox)
 		text = false
+	
 	}
+	
+	if(alreadyEnteredLockedRoom){
+		room_goto(Room4)
+		obj_player.x = 640
+		obj_player.y = 440
+		
+		instance_destroy(obj_textBox)
+		text = false
+	
+	}else if alreadyEnteredLockedRoom == false{
+		txt = "I Can't Enter"
+		
+		while(obj_textBox.isWriting == true && obj_textBox.charCount < string_length(txt)){
+			obj_textBox.charCount = string_length(txt)
+		}
+		
+		if(obj_textBox.alreadyWrote == true && obj_textBox.isWriting == false){
+			instance_destroy(obj_textBox)
+			text = false
+		}
+	}
+	
+	
+	
+	/*if(obj_textBox.charCount < string_length(obj_player.txt)){
+			key2 = true
+		}else{
+			key2 = false
+			
+		}	
+	*/
+	
+	
+	
 	
 }
 
