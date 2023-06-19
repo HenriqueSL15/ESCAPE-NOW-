@@ -22,7 +22,7 @@ if(!text && !obj_inventory.inventory){
 }
 	
 if obj_inventory.inventory{
-	item = 1	
+	item = 0	
 }
 
 

@@ -6,6 +6,7 @@
     {"id":{"name":"Sprite19","path":"sprites/Sprite19/Sprite19.yy",},"order":4,},
     {"id":{"name":"spr_oven","path":"sprites/spr_oven/spr_oven.yy",},"order":9,},
     {"id":{"name":"Room4","path":"rooms/Room4/Room4.yy",},"order":3,},
+    {"id":{"name":"Music1","path":"sounds/Music1/Music1.yy",},"order":0,},
     {"id":{"name":"spr_playerR","path":"sprites/spr_playerR/spr_playerR.yy",},"order":0,},
     {"id":{"name":"obj_closedWindow","path":"objects/obj_closedWindow/obj_closedWindow.yy",},"order":6,},
     {"id":{"name":"obj_openWindow","path":"objects/obj_openWindow/obj_openWindow.yy",},"order":5,},

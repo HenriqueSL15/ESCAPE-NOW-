@@ -6,7 +6,11 @@ walksp = 3
 
 alreadyEnteredLockedRoom = false;
 
-teleported = false;
+playMusic1 = false
+
+alreadyStarted = false
+
+alreadyGotCoins1 = false
 
 text = false
 

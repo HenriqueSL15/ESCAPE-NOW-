@@ -5,6 +5,8 @@ item = 0
 
 
 
+
+
 //PICTURE
 if(yDir == 1 && place_meeting(x,y-30,obj_picture2)){
 	text = true
@@ -69,6 +71,7 @@ if(yDir == 1 && place_meeting(x,y-30,obj_desk)){
 			obj_inventory.coins = false
 		}else{
 			obj_inventory.coins = true	
+			alreadyGotCoins1 = true
 		}
 		
 				
@@ -151,7 +154,7 @@ if(yDir == 1 && place_meeting(x,y-30,obj_fridge)){
 	if(!crowbar){
 		txt = "COOOOLLLDD"
 	}else{
-		txt = "Got a key, but anyone would put a key here, whaaaat"
+		txt = "Got a key, but why would anyone put a key here, whaaaat"
 		
 		if(obj_textBox.charCount < string_length(obj_player.txt)){
 			crowbar = true
@@ -213,29 +216,34 @@ if(yDir == 1 && place_meeting(x,y-30,obj_sink)){
 if(xDir == 1 && place_meeting(x,y,obj_nextSceneRight)){
 	
 	if (room == Room1){
-					
+		if(alreadyGotCoins1){
+			room_goto(Room2)		
 			obj_player.x = 541
-			room_goto(Room2)
+		}else if(!alreadyGotCoins1){
+			text = true
+			instance_create_layer(403,440,"Text",obj_textBox)
+			txt = "Looks like I need some coins to open this door, I really don't know why but I need them..."	
 			
-		
+			item = 4
+			while(obj_textBox.isWriting == true && obj_textBox.charCount < string_length(txt)){
+				obj_textBox.charCount = string_length(txt)
+			}
+	
+			if(obj_textBox.alreadyWrote == true && obj_textBox.isWriting == false){
+				instance_destroy(obj_textBox)
+				text = false
+			}
+		}
+					
 			
 	}else if room == Room2{
 		room_goto(Room3)
 		obj_player.x = 485
 	}
 		
-		//txt = "Looks like I need some coins to open this door, I really don't know why but I need "
 		
 		
-		item = 1
-		while(obj_textBox.isWriting == true && obj_textBox.charCount < string_length(txt)){
-			obj_textBox.charCount = string_length(txt)
-		}
-	
-		if(obj_textBox.alreadyWrote == true && obj_textBox.isWriting == false){
-			instance_destroy(obj_textBox)
-			text = false
-		}
+		
 		
 	}
 	
