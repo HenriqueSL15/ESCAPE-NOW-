@@ -28,7 +28,8 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_11A6391F_1_2","properties":[],"isDnd":false,"objectId":null,"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":846.0,"y":384.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_77C24527","properties":[],"isDnd":false,"objectId":{"name":"obj_carpet2","path":"objects/obj_carpet2/obj_carpet2.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.2937499,"scaleY":0.9166666,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":433.0,"y":423.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_73E94107","properties":[],"isDnd":false,"objectId":{"name":"obj_bed1","path":"objects/obj_bed1/obj_bed1.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":752.0,"y":384.0,},
-      ],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritVisibility":true,"inheritSubLayers":true,"gridX":16,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_56790B68","properties":[],"isDnd":false,"objectId":{"name":"obj_endDoor","path":"objects/obj_endDoor/obj_endDoor.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":2.0,"scaleY":1.7604167,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":576.0,"y":256.0,},
+      ],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritVisibility":true,"inheritSubLayers":true,"gridX":16,"gridY":1,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Blocks","instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_52BD212_1_2","properties":[],"isDnd":false,"objectId":{"name":"obj_brickWall","path":"objects/obj_brickWall/obj_brickWall.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":400.0,"y":512.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_4D4B7EA3_1_2","properties":[],"isDnd":false,"objectId":{"name":"obj_brickWall","path":"objects/obj_brickWall/obj_brickWall.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":848.0,"y":512.0,},
@@ -458,6 +459,7 @@
     {"name":"inst_772F30AC","path":"rooms/Room4/Room4.yy",},
     {"name":"inst_77C24527","path":"rooms/Room4/Room4.yy",},
     {"name":"inst_73E94107","path":"rooms/Room4/Room4.yy",},
+    {"name":"inst_56790B68","path":"rooms/Room4/Room4.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

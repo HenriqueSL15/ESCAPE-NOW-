@@ -7,8 +7,3 @@ if(!alreadyStarted){
 }else if(alreadyStarted){
 	audio_resume_sound(Music1)
 }
-
-
-
-
-

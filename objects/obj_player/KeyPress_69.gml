@@ -275,6 +275,27 @@ if yDir == -1 && place_meeting(x,y,obj_nextSceneDown){
 	}
 }
 
+
+if(yDir == 1 && place_meeting(x,y,obj_endDoor)){
+	
+	text = true
+	instance_create_layer(403,440,"Text",obj_textBox)
+	
+	txt = "What is this, what on earth could this lead to? Wait, what's happening with me, WAIT NOOO NOOOOOO"
+	
+	while(obj_textBox.isWriting == true && obj_textBox.charCount < string_length(txt)){
+		obj_textBox.charCount = string_length(txt)
+	}
+	
+		
+	if(obj_textBox.alreadyWrote == true && obj_textBox.isWriting == false){
+		instance_destroy(obj_textBox)
+		text = false
+		game_end();
+	}
+}
+
+
 if yDir == 1 && place_meeting(x,y,obj_lockedDoor){
 	text = true
 	instance_create_layer(403,440,"Text",obj_textBox)
